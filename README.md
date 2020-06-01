@@ -12,6 +12,7 @@ v2.2.1
 
 ## Requerimientos
 
+* Docker.
 * Python3.
 * Pulumi CLI ([pulumi](https://www.pulumi.com/docs/reference/cli/)).
 * Cuenta de Github ([github](https://github.com/)).
@@ -23,7 +24,7 @@ Nota: este demo tiene dependencia con [github_demo](https://github.com/aldenso/p
 Normalmente el proyecto se crea como sigue:
 
 ```sh
-pulumi new -d "Mi proyecto docker" --dir docker_example -n docker_example -s production -y python
+pulumi new -d "Mi proyecto docker" --dir pulumi_docker_demo -n pulumi_docker_demo -s production -y python
 ```
 
 Nota: No realizar, ya el repositorio tiene el contenido final
@@ -47,7 +48,7 @@ Crear el stack inicial.
 pulumi stack init production
 ```
 
-Se ingresan las configuraciones necesarias para el programa.
+Se ingresan las configuraciones necesarias para el programa, debido a dependencias con el repo [github_demo](https://github.com/aldenso/pulumi_github_demo).
 
 ```sh
 pulumi config set --secret github:token TUTOKENDEGITHUB
